@@ -1,5 +1,5 @@
 # MVVM Design Pattern Demo
-An Xcode 9 project written in Swift 4 code designed using the MVVM design pattern, truly extolling the virtues of MVVM over MVC.
+An Xcode 9 project written in Swift 4 code built using the MVVM design pattern, truly extolling the virtues of MVVM over MVC.
 
 In the [tutorial](http://iosbrain.com/blog/2018/05/26/introduction-to-mvvm-refactoring-an-mvc-app-using-the-mvvm-design-pattern) accompanying this repo, I'll introduce you to the "Model-View-ViewModel" or "MVVM" design pattern. For a historical and pragmatic perspective, I'll compare the very well-known "Model-View-Controller" or "MVC" design pattern, long favored by many iOS developers, to MVVM, which has steadily been gaining traction among the same group of developers.
 
