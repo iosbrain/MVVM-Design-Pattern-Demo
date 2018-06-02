@@ -55,8 +55,8 @@ class DetailViewController: UIViewController {
         imageView.alpha = 0.0
         
         // #1 - Define a closure (completion block) INSTANCE for updating a UIImageView
-        // once an image downloads.
-        let imageCompletionClosure = { ( imageData: NSData ) -> Void in
+        // once an image downloads. Added capture list to prevent retain cycles.
+        let imageCompletionClosure = { [unowned self] ( imageData: NSData ) -> Void in
             
             // #2 - Download occurs on background thread, but UI update
             // MUST occur on the main thread.
@@ -92,6 +92,12 @@ class DetailViewController: UIViewController {
         messierViewModel?.download(completionHanlder: imageCompletionClosure)
         
     } // end func viewDidLoad
+    
+    // print deallocation to make sure closure isn't
+    // causing a retain cycle
+    deinit {
+       print("Class instance deinitialized")
+    }
     
     override func viewDidLayoutSubviews() {
         
